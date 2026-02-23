@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade9</title>
+          
+</head>
+
+<form onsubmit="return validarData()" action="atividade10.html" method="GET">
+    <label>Data de Nascimento:</label><br>
+    <input type="date" id="dataNasc"><br><br>
+
+    <button type="submit">Enviar</button>
+
+</form>
+
+<script>
+    function validarData() {
+        const dataDigitada = new Date(document.getElementById("dataNasc").value);
+        const hoje = new Date();
+
+        if (dataDigitada > hoje) {
+            alert("A data não pode ser futura.")
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>

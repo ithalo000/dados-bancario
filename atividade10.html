@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=-, initial-scale=1.0">
+    <title>atividade10</title>
+    <form action="atividade11.html" method="GET">
+</head>
+
+<body>
+    <form>
+        <p>Possui carro?</p>
+        
+        <label>
+            <input type="radio" name="carro" value="sim" onclick="mostrarCampo()">Sim
+        </label>
+        <label>
+            <input type="radio" name="carro" value="nao" onclick="mostrarCampo()">Não
+        </label>
+        <div id="moldeloCarro" style="display:none;margin-top:10px;">
+            <label>Qual é o modelo?</label><br>
+            <input type="text">
+        </div>
+    </form>
+    <script>
+        function mostrarCampo() {
+            const escolha = document.querySelector('input[name="carro"]:checked').value;
+            const div = document.getElementById("modeloCarro");
+
+            if (escolha === "sim") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+    </script>
+
+</html>
